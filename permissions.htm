@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>土建视界 - 应用权限说明</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif; line-height: 1.8; background: #f5f7fa; padding: 20px; }
+        .container { max-width: 900px; margin: 0 auto; }
+        .header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 40px 30px; border-radius: 12px; margin-bottom: 30px; text-align: center; box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3); }
+        .header h1 { font-size: 32px; }
+        .permission { background: white; padding: 25px; margin: 20px 0; border-radius: 12px; border-left: 5px solid #667eea; box-shadow: 0 2px 15px rgba(0,0,0,0.08); }
+        .permission h2 { color: #2c3e50; font-size: 22px; margin-bottom: 15px; }
+        .permission p { color: #555; margin: 10px 0; font-size: 16px; }
+        .permission strong { color: #333; }
+        .badge { display: inline-block; background: #e8f4fd; color: #2c3e50; padding: 4px 12px; border-radius: 20px; font-size: 14px; margin-top: 10px; }
+        .required { background: #ffebee; color: #c62828; }
+        .optional { background: #e8f5e9; color: #2e7d32; }
+        @media (max-width: 768px) {
+            .container { padding: 10px; }
+            .header { padding: 30px 20px; }
+            .header h1 { font-size: 24px; }
+            .permission { padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📱 应用权限说明</h1>
+            <p style="margin-top: 10px; font-size: 16px;">土建视界需要以下权限来提供更好的服务</p>
+        </div>
+        
+        <div class="permission">
+            <h2>📷 相机权限</h2>
+            <p><strong>用途：</strong>拍摄视频和照片，用于发布招标信息、厂家展示、技术分享等内容</p>
+            <p><strong>使用场景：</strong>当您点击"发布视频"并选择"拍摄"时</p>
+            <p><strong>数据处理：</strong>拍摄的内容仅在您确认上传后才会发送到服务器</p>
+            <span class="badge optional">非必需权限</span>
+            <p style="margin-top: 10px; color: #666; font-size: 14px;">如拒绝授权，您仍可以选择本地已有的视频/图片上传</p>
+        </div>
+
+        <div class="permission">
+            <h2>📁 存储权限</h2>
+            <p><strong>用途：</strong>读取和保存本地视频、图片文件</p>
+            <p><strong>使用场景：</strong></p>
+            <ul style="margin: 10px 0 10px 20px; color: #555;">
+                <li>从相册选择视频/图片上传</li>
+                <li>下载保存平台上的视频到本地</li>
+                <li>缓存视频以节省流量</li>
+            </ul>
+            <p><strong>数据处理：</strong>仅读取您明确选择的文件，不会扫描您的所有文件</p>
+            <span class="badge optional">非必需权限</span>
+            <p style="margin-top: 10px; color: #666; font-size: 14px;">如拒绝授权，您将无法从相册选择文件或保存下载</p>
+        </div>
+
+        <div class="permission">
+            <h2>📍 位置权限</h2>
+            <p><strong>用途：</strong>获取您的地理位置，用于展示附近的招标项目和供应商</p>
+            <p><strong>使用场景：</strong></p>
+            <ul style="margin: 10px 0 10px 20px; color: #555;">
+                <li>在地图上查看附近项目</li>
+                <li>发布视频时自动标注位置</li>
+                <li>推荐附近的供应商</li>
+            </ul>
+            <p><strong>数据处理：</strong>位置信息仅用于服务功能，不会用于其他目的</p>
+            <span class="badge optional">非必需权限</span>
+            <p style="margin-top: 10px; color: #666; font-size: 14px;">如拒绝授权，您仍可以手动输入位置或浏览全国范围的内容</p>
+        </div>
+
+        <div class="permission">
+            <h2>🌐 网络权限</h2>
+            <p><strong>用途：</strong>连接互联网，实现以下功能：</p>
+            <ul style="margin: 10px 0 10px 20px; color: #555;">
+                <li>浏览招标信息、厂家视频、技术分享</li>
+                <li>上传您发布的视频和图片</li>
+                <li>与其他用户即时聊天</li>
+                <li>加载视频和图片内容</li>
+            </ul>
+            <p><strong>数据处理：</strong>所有网络传输均采用加密协议（HTTPS）</p>
+            <span class="badge required">必需权限</span>
+            <p style="margin-top: 10px; color: #666; font-size: 14px;">没有网络权限，应用将无法正常使用</p>
+        </div>
+
+        <div style="background: white; padding: 25px; margin: 30px 0; border-radius: 12px; box-shadow: 0 2px 15px rgba(0,0,0,0.08);">
+            <h2 style="color: #2c3e50; margin-bottom: 15px;">💡 权限管理说明</h2>
+            <p style="color: #555; margin: 10px 0;">您可以随时在手机"设置"中管理应用权限：</p>
+            <ol style="margin: 15px 0 15px 20px; color: #555; line-height: 2;">
+                <li>打开手机"设置" → "应用管理"</li>
+                <li>找到"土建视界"应用</li>
+                <li>点击"权限管理"</li>
+                <li>开启或关闭相应权限</li>
+            </ol>
+            <p style="color: #666; font-size: 14px; margin-top: 15px;">关闭非必需权限不会影响应用的基本功能使用。</p>
+        </div>
+
+        <div style="text-align: center; color: #999; margin-top: 40px; padding: 20px; font-size: 14px;">
+            <p>如有任何疑问，请查看 <a href="index.html" style="color: #667eea;">《隐私政策》</a> 或联系我们</p>
+            <p style="margin-top: 10px;">© 2026 土建视界 版权所有</p>
+        </div>
+    </div>
+</body>
+</html>
